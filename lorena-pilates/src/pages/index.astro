@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import AboutLorena from "../components/AboutLorena.astro";
+import Classes from "../components/Classes.astro";
+import Schedule from "../components/Schedule.astro";
+import FAQ from "../components/FAQ.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout>
+  <Header />
+  <main>
+    <Hero />
+    <AboutLorena />
+    <Classes />
+    <Schedule />
+    <FAQ />
+    <Contact />
+  </main>
+  <Footer />
+  <a
+    href="https://wa.me/5491161775720?text=Hola%20Lorena%2C%20quisiera%20consultar%20por%20las%20clases%20de%20Pilates%20Mat."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Consultar por WhatsApp"
+    class="fixed bottom-5 right-5 z-30 flex h-14 items-center justify-center rounded-full bg-[#435441] px-5 text-sm font-semibold text-white shadow-xl transition hover:-translate-y-1 hover:bg-[#344232]"
+  >
+    WhatsApp <span class="ml-2" aria-hidden="true">↗</span>
+  </a>
+</BaseLayout>

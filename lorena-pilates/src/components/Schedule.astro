@@ -1,0 +1,25 @@
+---
+import { site } from "../data/site";
+import WhatsAppLink from "./WhatsAppLink.astro";
+---
+<section id="horarios" class="bg-[var(--olive)] py-20 text-white sm:py-24">
+  <div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 md:grid-cols-[1fr_0.8fr] md:items-center">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#d7dfcf]">Organizá tu semana</p>
+      <h2 class="mt-4 font-serif text-4xl sm:text-5xl">Tu momento de movimiento.</h2>
+      <p class="mt-5 max-w-xl leading-7 text-white/75">Clases grupales presenciales de {site.duration.toLowerCase()} en Burzaco.</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <span class="rounded-full border border-white/25 px-4 py-2 text-sm">{site.days}</span>
+        <span class="rounded-full border border-white/25 px-4 py-2 text-sm">{site.duration}</span>
+      </div>
+    </div>
+    <div class="rounded-3xl bg-white p-6 text-[var(--ink)] sm:p-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.15em] text-[var(--sage)]">Horarios y disponibilidad</p>
+      <h3 class="mt-3 font-serif text-2xl">Consultá tu lugar</h3>
+      <p class="mt-3 text-sm leading-6 text-stone-600">Los horarios exactos y la disponibilidad de los grupos están pendientes de confirmar.</p>
+      <p class="mt-4 text-sm"><strong>Medios de pago:</strong> {site.paymentMethods}.</p>
+      <p class="mt-2 text-xs text-stone-500">PENDIENTE: completar horarios, dirección o indicaciones y valores.</p>
+      <WhatsAppLink class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[var(--olive)] px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-[#344232]" label="Consultar horarios por WhatsApp" message="Hola Lorena, quisiera consultar los horarios, valores y disponibilidad de las clases grupales de Pilates Mat." />
+    </div>
+  </div>
+</section>

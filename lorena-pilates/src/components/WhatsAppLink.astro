@@ -1,0 +1,23 @@
+---
+import { site, whatsappLink } from "../data/site";
+
+interface Props {
+  label?: string;
+  class?: string;
+  message?: string;
+}
+const {
+  label = "Consultar por WhatsApp",
+  class: className = "",
+  message = "Hola Lorena, vi tu página de Pilates Mat y quisiera consultar por las clases, horarios y disponibilidad.",
+} = Astro.props;
+---
+<a
+  class={className}
+  href={whatsappLink(message)}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`${label} (abre WhatsApp en una nueva pestaña)`}
+>
+  {label}
+</a>
