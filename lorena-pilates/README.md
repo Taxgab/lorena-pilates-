@@ -27,6 +27,8 @@ npm run build
 npm run preview
 ```
 
+La imagen de Open Graph (`public/og-image.png`) se regenera con `npm run og` a partir de `scripts/og-image.svg`.
+
 ## Datos pendientes antes de publicar
 Buscar `PENDIENTE:` en el proyecto. No publicar hasta revisar:
 - Horarios exactos de martes y jueves
@@ -39,29 +41,24 @@ Buscar `PENDIENTE:` en el proyecto. No publicar hasta revisar:
 El teléfono provisto se normaliza como `5491161775720` para el enlace internacional de WhatsApp. Confirmar que ese número tiene WhatsApp y que está escrito correctamente antes de publicar.
 El enlace incluye un mensaje precargado, no envía nada automáticamente.
 
-## Publicar en GitHub
-1. Creá un repositorio vacío en GitHub llamado `lorena-pilates` (sin README ni licencia para evitar conflictos).
-2. En esta carpeta ejecutá:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial Pilates Mat landing page"
-   git branch -M main
-   git remote add origin https://github.com/TU-USUARIO/lorena-pilates.git
-   git push -u origin main
-   ```
-3. Reemplazá `TU-USUARIO` por tu usuario de GitHub.
+## Repositorio
+
+El proyecto ya está versionado en GitHub:
+`https://github.com/Taxgab/lorena-pilates-`
+
+La aplicación vive en la subcarpeta `lorena-pilates/` dentro del repositorio.
 
 ## Publicar en Vercel
 1. Entrá en Vercel e iniciá sesión con GitHub.
-2. Elegí **Add New → Project** y seleccioná `lorena-pilates`.
-3. Vercel debería detectar Astro automáticamente.
-4. Configuración estándar:
+2. Elegí **Add New → Project** y seleccioná el repositorio `lorena-pilates-`.
+3. **Importante — Root Directory:** el proyecto está dentro de la subcarpeta `lorena-pilates`, así que en *Root Directory* elegí `lorena-pilates`. Sin este paso Vercel no encuentra `package.json` y **no detecta Astro**.
+4. Con el Root Directory configurado, Vercel detecta Astro automáticamente. Configuración esperada:
    - Build command: `npm run build`
    - Output directory: `dist`
    - Install command: `npm install`
 5. Hacé clic en Deploy. Vercel generará una URL de subdominio `*.vercel.app`.
 6. Cada push a `main` actualizará la web de producción; las ramas y pull requests pueden generar previews.
+7. Cuando confirmes la URL final, verificá que coincida con `site` en `astro.config.mjs` (hoy `https://lorena-pilates.vercel.app`). Si difiere, actualizala para que `canonical`, `sitemap` y `og:image` apunten al dominio correcto.
 
 ## Antes del lanzamiento
 - [ ] Completar horarios exactos.
