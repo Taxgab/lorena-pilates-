@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Lorena Carrión · Pilates Mat en Burzaco">
+  <rect width="1200" height="630" fill="#f5f1e9"/>
+  <circle cx="1040" cy="110" r="240" fill="#e7ddd0"/>
+  <circle cx="150" cy="610" r="190" fill="#e7ddd0" opacity="0.65"/>
+  <text x="100" y="190" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="6" fill="#435441">PILATES MAT · BURZACO</text>
+  <text x="98" y="330" font-family="Georgia, 'Times New Roman', serif" font-size="100" fill="#30372f">Lorena Carrión</text>
+  <text x="100" y="405" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-style="italic" fill="#435441">Encontrá tu propio equilibrio.</text>
+  <rect x="100" y="452" width="90" height="6" fill="#c18b73"/>
+  <text x="100" y="520" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#5b5f57">Clases grupales presenciales · Martes y jueves · 60 minutos</text>
+</svg>
