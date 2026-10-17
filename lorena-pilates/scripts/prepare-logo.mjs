@@ -6,7 +6,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const publicDir = join(here, "..", "public", "imagenes");
 const source = join(here, "logo-original.jpg");
 const logoOut = join(publicDir, "logo.png");
-const markOut = join(publicDir, "logo-mark.png");
+const horizOut = join(publicDir, "logo-horizontal.png");
 
 // The source logo is a flat-color lockup (figures + wordmark) on a white background.
 // 1) trim the uniform white border, 2) downscale, 3) turn near-white pixels transparent
@@ -28,18 +28,42 @@ for (let i = 0; i < data.length; i += 4) {
 }
 
 const png = { compressionLevel: 9, effort: 10, palette: true, quality: 95 };
-const base = sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } });
+const base = await sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } })
+  .png()
+  .toBuffer();
 
-// Full lockup (figures + wordmark): used where there is vertical room (footer).
-const full = await base.clone().png(png).toFile(logoOut);
+// Full vertical lockup (figures above wordmark): used in the footer.
+await sharp(base).png(png).toFile(logoOut);
 
-// Icon-only mark (figures, without the wordmark): used in compact spots like the header.
-const markHeight = Math.round(info.height * 0.7);
-const mark = await base
-  .clone()
-  .extract({ left: 0, top: 0, width: info.width, height: markHeight })
+// Split the lockup into its two parts.
+const splitY = Math.round(info.height * 0.7);
+const iconHeight = splitY;
+const icon = await sharp(base)
+  .extract({ left: 0, top: 0, width: info.width, height: iconHeight })
+  .png()
+  .toBuffer();
+const wordmark = await sharp(base)
+  .extract({ left: 0, top: splitY, width: info.width, height: info.height - splitY })
+  .png()
+  .toBuffer();
+
+// Horizontal lockup (icon beside wordmark) for the header: the wordmark keeps the
+// same width as the icon, matching the original lockup proportions.
+const wordmarkScaled = await sharp(wordmark).resize({ width: info.width }).png().toBuffer();
+const wordmarkMeta = await sharp(wordmarkScaled).metadata();
+const gap = Math.round(info.width * 0.13);
+const width = info.width + gap + wordmarkMeta.width;
+const height = iconHeight;
+
+const horizontal = await sharp({
+  create: { width, height, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
+})
+  .composite([
+    { input: icon, top: 0, left: 0 },
+    { input: wordmarkScaled, top: Math.round((height - wordmarkMeta.height) / 2), left: info.width + gap },
+  ])
   .png(png)
-  .toFile(markOut);
+  .toFile(horizOut);
 
-console.log(`logo.png      ${full.width}x${full.height}`);
-console.log(`logo-mark.png ${mark.width}x${mark.height}`);
+console.log(`logo.png            ${info.width}x${info.height}`);
+console.log(`logo-horizontal.png ${horizontal.width}x${horizontal.height}`);

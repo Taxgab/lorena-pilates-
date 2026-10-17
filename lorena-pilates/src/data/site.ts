@@ -11,7 +11,7 @@ export const site = {
   whatsappNumber: "5491161775720",
   instagramUrl: "https://www.instagram.com/pilates_by_lore/",
   logo: "/imagenes/logo.png",
-  logoMark: "/imagenes/logo-mark.png",
+  logoHorizontal: "/imagenes/logo-horizontal.png",
   heroImage: "/imagenes/lorena.jpg",
   studioAddress: "", // PENDIENTE: dirección o indicaciones exactas.
   scheduleDetails: "", // PENDIENTE: horarios de cada turno.
