@@ -11,7 +11,7 @@ export const site = {
   // PENDIENTE: confirmar que este número tiene WhatsApp antes de publicar.
   whatsappNumber: "5491161775720",
   instagramUrl: "https://www.instagram.com/pilates_by_lore/",
-  email: "", // PENDIENTE: correo de contacto para la Política de Privacidad.
+  email: "carrionln@gmail.com",
   logo: "/imagenes/logo.png",
   logoHorizontal: "/imagenes/logo-horizontal.png",
   heroImage: "/imagenes/lorena.jpg",

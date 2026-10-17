@@ -6,7 +6,6 @@ import { site } from "../data/site";
 
 const updatedAt = "17 de octubre de 2026";
 const siteUrl = Astro.site ? new URL("/", Astro.site).toString() : "[URL del sitio]";
-const email = site.email || "[correo electrónico]";
 
 const heading = "mt-10 font-serif text-2xl text-[var(--ink)] sm:text-3xl";
 const body = "mt-4 leading-7 text-stone-600";
@@ -27,7 +26,7 @@ const list = "mt-4 list-disc space-y-2 pl-5 leading-7 text-stone-600 marker:text
       <p class={body}>{site.name}, instructora de Pilates, es responsable del tratamiento de los datos personales recopilados a través de este sitio web.</p>
       <ul class={list}>
         <li><strong>Responsable:</strong> {site.name}</li>
-        <li><strong>Correo electrónico de contacto:</strong> {email}</li>
+        <li><strong>Correo electrónico de contacto:</strong> <a href={`mailto:${site.email}`} class="text-[var(--olive)] underline underline-offset-4 transition hover:text-[var(--sage)]">{site.email}</a></li>
         <li><strong>Sitio web:</strong> {siteUrl}</li>
         <li><strong>Ubicación:</strong> {site.location}, Argentina</li>
       </ul>
@@ -96,7 +95,7 @@ const list = "mt-4 list-disc space-y-2 pl-5 leading-7 text-stone-600 marker:text
     <section>
       <h2 class={heading}>9. Tus derechos</h2>
       <p class={body}>De acuerdo con la normativa argentina de protección de datos personales, podés solicitar el acceso a tus datos, su actualización, rectificación o supresión cuando corresponda.</p>
-      <p class={body}>Para ejercer estos derechos, podés comunicarte a través de {email}, indicando tu solicitud.</p>
+      <p class={body}>Para ejercer estos derechos, podés comunicarte a través de <a href={`mailto:${site.email}`} class="text-[var(--olive)] underline underline-offset-4 transition hover:text-[var(--sage)]">{site.email}</a>, indicando tu solicitud.</p>
       <p class={body}>La Ley 25.326 establece que el derecho de acceso debe atenderse, en general, dentro de los diez días corridos de recibido el pedido, y los pedidos de rectificación, actualización o supresión dentro de los cinco días hábiles de recibida la solicitud, cuando correspondan.</p>
       <p class={body}>La Agencia de Acceso a la Información Pública, en su carácter de autoridad de control, recibe denuncias y reclamos relacionados con el incumplimiento de las normas de protección de datos personales.</p>
     </section>
@@ -116,7 +115,7 @@ const list = "mt-4 list-disc space-y-2 pl-5 leading-7 text-stone-600 marker:text
       <h2 class={heading}>12. Contacto</h2>
       <p class={body}>Si tenés preguntas sobre esta Política de Privacidad o sobre el tratamiento de tus datos personales, podés escribir a:</p>
       <p class="mt-4 leading-7 text-stone-600"><strong>{site.name}</strong></p>
-      <p class={body}>Correo electrónico: {email}</p>
+      <p class={body}>Correo electrónico: <a href={`mailto:${site.email}`} class="text-[var(--olive)] underline underline-offset-4 transition hover:text-[var(--sage)]">{site.email}</a></p>
       <p class={body}>Sitio web: {siteUrl}</p>
     </section>
 
