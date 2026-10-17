@@ -34,7 +34,6 @@ Buscar `PENDIENTE:` en el proyecto. No publicar hasta revisar:
 - Horarios exactos y disponibilidad de cada grupo
 - Dirección exacta o indicaciones del estudio en Burzaco
 - Política de precios: se acepta efectivo y transferencia, pero faltan los importes y modalidad (por clase/abono)
-- Confirmar que la fotografía de portada representa a Lorena o reemplazarla por una foto propia autorizada
 
 ## WhatsApp
 El teléfono provisto se normaliza como `5491161775720` para el enlace internacional de WhatsApp. Confirmar que ese número tiene WhatsApp y que está escrito correctamente antes de publicar.
@@ -66,7 +65,7 @@ La aplicación vive en la subcarpeta `lorena-pilates/` dentro del repositorio.
 - [ ] Completar horarios exactos y disponibilidad.
 - [ ] Confirmar dirección y cómo llegar, sin publicar domicilio privado sin autorización.
 - [x] Instagram agregado (`https://www.instagram.com/pilates_by_lore/`).
-- [ ] Sustituir imágenes de referencia por fotos propias autorizadas.
+- [x] Imágenes propias (logo y foto) integradas.
 - [ ] Verificar WhatsApp desde un teléfono.
 - [ ] Revisar texto, contraste, móvil y enlaces.
 - [ ] Confirmar política de privacidad si se agregan analíticas o formularios.

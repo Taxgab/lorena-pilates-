@@ -3,21 +3,24 @@
     <div class="max-w-2xl">
       <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--olive)]">La práctica</p>
       <h2 class="mt-4 font-serif text-4xl text-[var(--ink)] sm:text-5xl">Pilates Mat, a tu ritmo.</h2>
-      <p class="mt-5 leading-7 text-stone-600">Una práctica sobre colchoneta que trabaja el control del movimiento, la respiración, la fuerza y la movilidad. Las clases combinan ejercicios guiados y atención a la técnica, en formato grupal, presencial o personalizado.</p>
+      <p class="mt-5 leading-7 text-stone-600">Una práctica sobre colchoneta que trabaja el control del movimiento, la respiración, la fuerza y la movilidad, con atención a cada detalle. En formato grupal, presencial o personalizado.</p>
     </div>
-    <div class="mt-10 grid gap-4 sm:grid-cols-3">
+    <h3 class="mt-12 font-serif text-2xl text-[var(--ink)] sm:text-3xl">¿Qué podés trabajar?</h3>
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {[
-        { n: "01", title: "Movimiento consciente", text: "Explorá el movimiento con control y atención a la postura." },
-        { n: "02", title: "Fuerza y movilidad", text: "Trabajá diferentes capacidades corporales mediante ejercicios de Pilates Mat." },
-        { n: "03", title: "Un momento para vos", text: "Reservá un espacio semanal dedicado a tu práctica y bienestar." },
-      ].map((item) => (
-        <article class="rounded-3xl border border-[#e4ddd2] bg-[#faf8f3] p-6 sm:p-7">
-          <span class="font-serif text-3xl text-[var(--sage)]">{item.n}</span>
-          <h3 class="mt-6 font-serif text-2xl text-[var(--ink)]">{item.title}</h3>
-          <p class="mt-3 text-sm leading-6 text-stone-600">{item.text}</p>
+        "Fortalecimiento y resistencia muscular",
+        "Movilidad y flexibilidad",
+        "Control corporal y coordinación",
+        "Conciencia postural",
+        "Respiración y concentración",
+        "Bienestar físico y mental",
+      ].map((item, index) => (
+        <article class="flex items-center gap-4 rounded-2xl border border-[#e4ddd2] bg-[#faf8f3] px-5 py-4">
+          <span class="font-serif text-xl text-[var(--sage)]">{String(index + 1).padStart(2, "0")}</span>
+          <span class="text-sm font-medium text-[var(--ink)]">{item}</span>
         </article>
       ))}
     </div>
-    <p class="mt-5 text-xs text-stone-500">La descripción de los beneficios es general y no constituye una promesa de resultados médicos.</p>
+    <p class="mt-6 text-xs text-stone-500">La descripción de los beneficios es general y no constituye una promesa de resultados médicos.</p>
   </div>
 </section>
