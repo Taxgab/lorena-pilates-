@@ -8,7 +8,7 @@ interface Props {
 }
 const {
   title = `${site.name} | Pilates Mat en Burzaco`,
-  description = "Clases grupales presenciales de Pilates Mat en Burzaco. Consultá horarios y disponibilidad.",
+  description = "Clases grupales, presenciales y personalizadas de Pilates Mat en Burzaco. Consultá horarios y disponibilidad.",
 } = Astro.props;
 const canonicalUrl = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
 const ogImageUrl = Astro.site ? new URL("/og-image.png", Astro.site).toString() : undefined;

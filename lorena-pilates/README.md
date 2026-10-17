@@ -1,6 +1,6 @@
 # Lorena Carrión · Pilates Mat
 
-Sitio de presentación estático para clases grupales presenciales de Pilates Mat en Burzaco, Buenos Aires.
+Sitio de presentación estático para clases grupales, presenciales y personalizadas de Pilates Mat en Burzaco, Buenos Aires.
 
 ## Stack
 - Astro
@@ -31,15 +31,17 @@ La imagen de Open Graph (`public/og-image.png`) se regenera con `npm run og` a p
 
 ## Datos pendientes antes de publicar
 Buscar `PENDIENTE:` en el proyecto. No publicar hasta revisar:
-- Horarios exactos de martes y jueves
+- Horarios exactos y disponibilidad de cada grupo
 - Dirección exacta o indicaciones del estudio en Burzaco
-- Enlace de Instagram
 - Política de precios: se acepta efectivo y transferencia, pero faltan los importes y modalidad (por clase/abono)
 - Confirmar que la fotografía de portada representa a Lorena o reemplazarla por una foto propia autorizada
 
 ## WhatsApp
 El teléfono provisto se normaliza como `5491161775720` para el enlace internacional de WhatsApp. Confirmar que ese número tiene WhatsApp y que está escrito correctamente antes de publicar.
 El enlace incluye un mensaje precargado, no envía nada automáticamente.
+
+## Instagram
+Perfil: `https://www.instagram.com/pilates_by_lore/` (configurado en `src/data/site.ts`).
 
 ## Repositorio
 
@@ -61,9 +63,9 @@ La aplicación vive en la subcarpeta `lorena-pilates/` dentro del repositorio.
 7. Cuando confirmes la URL final, verificá que coincida con `site` en `astro.config.mjs` (hoy `https://lorena-pilates.vercel.app`). Si difiere, actualizala para que `canonical`, `sitemap` y `og:image` apunten al dominio correcto.
 
 ## Antes del lanzamiento
-- [ ] Completar horarios exactos.
+- [ ] Completar horarios exactos y disponibilidad.
 - [ ] Confirmar dirección y cómo llegar, sin publicar domicilio privado sin autorización.
-- [ ] Añadir Instagram correcto cuando exista/esté confirmado.
+- [x] Instagram agregado (`https://www.instagram.com/pilates_by_lore/`).
 - [ ] Sustituir imágenes de referencia por fotos propias autorizadas.
 - [ ] Verificar WhatsApp desde un teléfono.
 - [ ] Revisar texto, contraste, móvil y enlaces.

@@ -1,15 +1,14 @@
 export const site = {
   name: "Lorena Carrión",
   profession: "Instructora internacional de Pilates Mat y Reformer",
-  service: "Pilates Mat · clases grupales presenciales",
+  service: "Pilates Mat · clases grupales, presenciales y personalizadas",
   location: "Burzaco, Buenos Aires",
   area: "Burzaco y Adrogué",
-  days: "Martes y jueves",
-  duration: "60 minutos",
+  duration: "50 minutos",
   paymentMethods: "Efectivo o transferencia",
   // PENDIENTE: confirmar que este número tiene WhatsApp antes de publicar.
   whatsappNumber: "5491161775720",
-  instagramUrl: "", // PENDIENTE: agregar URL cuando esté disponible.
+  instagramUrl: "https://www.instagram.com/pilates_by_lore/",
   studioAddress: "", // PENDIENTE: dirección o indicaciones exactas.
   scheduleDetails: "", // PENDIENTE: horarios de cada turno.
   priceDetails: "", // PENDIENTE: importes y modalidad de pago.
