@@ -27,7 +27,7 @@ npm run build
 npm run preview
 ```
 
-La imagen de Open Graph (`public/og-image.png`) se regenera con `npm run og` a partir de `scripts/og-image.svg`.
+La imagen de Open Graph (`public/og-image.jpg`) se regenera con `npm run og`.
 
 ## Datos pendientes antes de publicar
 Buscar `PENDIENTE:` en el proyecto. No publicar hasta revisar:
