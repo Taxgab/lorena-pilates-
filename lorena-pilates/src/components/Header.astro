@@ -4,13 +4,13 @@ import WhatsAppLink from "./WhatsAppLink.astro";
 ---
 <header class="absolute inset-x-0 top-0 z-20">
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8" aria-label="Navegación principal">
-    <a href="#inicio" class="flex items-center" aria-label={`${site.brand} — inicio`}>
+    <a href="/#inicio" class="flex items-center" aria-label={`${site.brand} — inicio`}>
       <img src={site.logoHorizontal} alt={site.brand} class="h-16 w-auto sm:h-20" width="639" height="298" />
     </a>
     <div class="hidden items-center gap-7 text-sm text-[var(--ink)] md:flex">
-      <a class="hover:text-[var(--olive)]" href="#clases">Las clases</a>
-      <a class="hover:text-[var(--olive)]" href="#lorena">Sobre Lorena</a>
-      <a class="hover:text-[var(--olive)]" href="#horarios">Horarios</a>
+      <a class="hover:text-[var(--olive)]" href="/#clases">Las clases</a>
+      <a class="hover:text-[var(--olive)]" href="/#lorena">Sobre Lorena</a>
+      <a class="hover:text-[var(--olive)]" href="/#horarios">Horarios</a>
     </div>
     <WhatsAppLink label="Consultar" class="rounded-full bg-[var(--olive)] px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[#344232]" />
   </nav>

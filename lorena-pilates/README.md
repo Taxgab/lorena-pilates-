@@ -34,6 +34,7 @@ Buscar `PENDIENTE:` en el proyecto. No publicar hasta revisar:
 - Horarios exactos y disponibilidad de cada grupo
 - Dirección exacta o indicaciones del estudio en Burzaco
 - Política de precios: se acepta efectivo y transferencia, pero faltan los importes y modalidad (por clase/abono)
+- Correo electrónico de contacto para la Política de Privacidad (`/privacidad`)
 
 ## WhatsApp
 El teléfono provisto se normaliza como `5491161775720` para el enlace internacional de WhatsApp. Confirmar que ese número tiene WhatsApp y que está escrito correctamente antes de publicar.
@@ -68,4 +69,4 @@ La aplicación vive en la subcarpeta `lorena-pilates/` dentro del repositorio.
 - [x] Imágenes propias (logo y foto) integradas.
 - [ ] Verificar WhatsApp desde un teléfono.
 - [ ] Revisar texto, contraste, móvil y enlaces.
-- [ ] Confirmar política de privacidad si se agregan analíticas o formularios.
+- [x] Política de Privacidad publicada en `/privacidad`.
