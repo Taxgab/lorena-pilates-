@@ -1,6 +1,6 @@
 # Lorena Carrión · Pilates Mat
 
-Sitio de presentación estático para clases grupales, presenciales y personalizadas de Pilates Mat en Burzaco, Buenos Aires.
+Sitio de presentación estático para clases grupales, presenciales y personalizadas de Pilates Mat en Adrogué y Burzaco, Buenos Aires.
 
 ## Stack
 - Astro
@@ -32,7 +32,7 @@ La imagen de Open Graph (`public/og-image.jpg`) se regenera con `npm run og`.
 ## Datos pendientes antes de publicar
 Buscar `PENDIENTE:` en el proyecto. No publicar hasta revisar:
 - Horarios exactos y disponibilidad de cada grupo
-- Dirección exacta o indicaciones del estudio en Burzaco
+- Dirección exacta o indicaciones del estudio en Adrogué y Burzaco
 - Política de precios: se acepta efectivo y transferencia, pero faltan los importes y modalidad (por clase/abono)
 - Correo electrónico de contacto para la Política de Privacidad (`/privacidad`)
 

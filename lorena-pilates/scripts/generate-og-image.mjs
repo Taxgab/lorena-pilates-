@@ -16,7 +16,7 @@ const background = `
   <rect width="${WIDTH}" height="${HEIGHT}" fill="#f5f1e9"/>
   <text x="64" y="404" font-family="Georgia, 'Times New Roman', serif" font-size="38" fill="#30372f">Clases grupales,</text>
   <text x="64" y="450" font-family="Georgia, 'Times New Roman', serif" font-size="38" fill="#30372f">presenciales y personalizadas</text>
-  <text x="64" y="502" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#5b5f57">50 minutos · Burzaco, Buenos Aires</text>
+  <text x="64" y="502" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#5b5f57">50 minutos · Adrogué y Burzaco</text>
   <rect x="64" y="524" width="90" height="6" fill="#c18b73"/>
 </svg>`;
 

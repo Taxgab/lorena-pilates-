@@ -4,8 +4,8 @@ export const site = {
   profession: "Instructora de Pilates Mat y Reformer",
   experience: "10 años de experiencia",
   service: "Pilates Mat · clases grupales, presenciales y personalizadas",
-  location: "Burzaco, Buenos Aires",
-  area: "Burzaco y Adrogué",
+  location: "Adrogué y Burzaco, Buenos Aires",
+  area: "Adrogué y Burzaco",
   duration: "50 minutos",
   paymentMethods: "Efectivo o transferencia",
   // PENDIENTE: confirmar que este número tiene WhatsApp antes de publicar.

@@ -7,12 +7,12 @@ interface Props {
   description?: string;
 }
 const {
-  title = `${site.brand} | Pilates Mat en Burzaco`,
-  description = "Clases grupales, presenciales y personalizadas de Pilates Mat en Burzaco. Consultá horarios y disponibilidad.",
+  title = `${site.brand} | Pilates Mat en Adrogué y Burzaco`,
+  description = "Clases grupales, presenciales y personalizadas de Pilates Mat en Adrogué y Burzaco. Consultá horarios y disponibilidad.",
 } = Astro.props;
 const canonicalUrl = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
 const ogImageUrl = Astro.site ? new URL("/og-image.jpg", Astro.site).toString() : undefined;
-const ogImageAlt = `${site.brand} · Pilates Mat en Burzaco`;
+const ogImageAlt = `${site.brand} · Pilates Mat en Adrogué y Burzaco`;
 ---
 <!doctype html>
 <html lang="es-AR">
