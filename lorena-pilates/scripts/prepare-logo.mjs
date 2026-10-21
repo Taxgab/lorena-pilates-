@@ -4,11 +4,11 @@ import { dirname, join } from "node:path";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const publicDir = join(here, "..", "public", "imagenes");
-const source = join(here, "logo-original.jpg");
+const source = join(here, "logo-source.jpg");
 const logoOut = join(publicDir, "logo.png");
 const horizOut = join(publicDir, "logo-horizontal.png");
 
-// The source logo is a flat-color lockup (figures + wordmark) on a white background.
+// The source logo is a monochrome lockup (figures + wordmark) on a white background.
 // 1) trim the uniform white border, 2) downscale, 3) turn near-white pixels transparent
 // so the mark blends onto any page background instead of showing a white box.
 const { data, info } = await sharp(source)
@@ -35,11 +35,11 @@ const base = await sharp(data, { raw: { width: info.width, height: info.height, 
 // Full vertical lockup (figures above wordmark): used in the footer.
 await sharp(base).png(png).toFile(logoOut);
 
-// Split the lockup into its two parts.
-const splitY = Math.round(info.height * 0.7);
-const iconHeight = splitY;
+// Split point measured on the artwork: figures end ~67% of the trimmed height,
+// right before the "Pilates" script.
+const splitY = Math.round(info.height * 0.67);
 const icon = await sharp(base)
-  .extract({ left: 0, top: 0, width: info.width, height: iconHeight })
+  .extract({ left: 0, top: 0, width: info.width, height: splitY })
   .png()
   .toBuffer();
 const wordmark = await sharp(base)
@@ -53,7 +53,7 @@ const wordmarkScaled = await sharp(wordmark).resize({ width: info.width }).png()
 const wordmarkMeta = await sharp(wordmarkScaled).metadata();
 const gap = Math.round(info.width * 0.13);
 const width = info.width + gap + wordmarkMeta.width;
-const height = iconHeight;
+const height = splitY;
 
 const horizontal = await sharp({
   create: { width, height, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
