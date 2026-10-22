@@ -13,6 +13,49 @@ const {
 const canonicalUrl = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
 const ogImageUrl = Astro.site ? new URL("/og-image.jpg", Astro.site).toString() : undefined;
 const ogImageAlt = `${site.brand} · Pilates Mat en Adrogué y Burzaco`;
+
+const siteUrl = Astro.site ? new URL("/", Astro.site).toString() : undefined;
+const structuredData =
+  siteUrl && canonicalUrl
+    ? {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": `${siteUrl}#organization`,
+            name: site.brand,
+            url: siteUrl,
+            logo: new URL(site.logo, siteUrl).toString(),
+            sameAs: [site.instagramUrl],
+          },
+          {
+            "@type": "Person",
+            "@id": `${siteUrl}#person`,
+            name: site.name,
+            jobTitle: site.profession,
+            image: new URL(site.heroImage, siteUrl).toString(),
+            worksFor: { "@id": `${siteUrl}#organization` },
+            sameAs: [site.instagramUrl],
+          },
+          {
+            "@type": "WebSite",
+            "@id": `${siteUrl}#website`,
+            url: siteUrl,
+            name: site.brand,
+            inLanguage: "es-AR",
+          },
+          {
+            "@type": "WebPage",
+            "@id": `${canonicalUrl}#webpage`,
+            url: canonicalUrl,
+            name: title,
+            inLanguage: "es-AR",
+            dateModified: site.lastUpdated,
+            isPartOf: { "@id": `${siteUrl}#website` },
+          },
+        ],
+      }
+    : null;
 ---
 <!doctype html>
 <html lang="es-AR">
@@ -21,6 +64,10 @@ const ogImageAlt = `${site.brand} · Pilates Mat en Adrogué y Burzaco`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f5f1e9" />
     <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
+    {structuredData && (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
+    )}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.brand} />
     <meta property="og:title" content={title} />

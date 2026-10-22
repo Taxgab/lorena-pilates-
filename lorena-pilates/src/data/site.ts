@@ -3,6 +3,7 @@ export const site = {
   brand: "Pilates by Lore",
   profession: "Instructora de Pilates Mat y Reformer",
   experience: "8 años de experiencia",
+  lastUpdated: "2026-10-22",
   service: "Pilates Mat · clases grupales, presenciales y personalizadas",
   location: "Adrogué y Burzaco, Buenos Aires",
   area: "Adrogué y Burzaco",
