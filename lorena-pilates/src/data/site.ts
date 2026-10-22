@@ -2,7 +2,7 @@ export const site = {
   name: "Lorena Carrión",
   brand: "Pilates by Lore",
   profession: "Instructora de Pilates Mat y Reformer",
-  experience: "10 años de experiencia",
+  experience: "8 años de experiencia",
   service: "Pilates Mat · clases grupales, presenciales y personalizadas",
   location: "Adrogué y Burzaco, Buenos Aires",
   area: "Adrogué y Burzaco",
